@@ -1,9 +1,9 @@
 /// Evaluation of a given value
-public struct Case<Values: Equatable, Return> {
+public struct given<Values: Equatable, Return> {
     let values: [Values]
     let closure: () -> Return
     
-    /// <#Description#>
+    /// Description
     /// - Parameters:
     ///   - values: The values to evaluate against
     ///   - closure: If a value is matched from here, then this is the function whitch will be called.

@@ -4,8 +4,8 @@
 ///   - cases: The cases which can be ecaluated, see `Case`
 /// - Returns: The first matching case's return value, if Void, then returns Void. Under some circumstances, no match will be found, and `nil` will then be returned
 public func match<Value, Return>(_ value: Value,
-                                 @CaseBuilder cases: () -> [Case<Value, Return>]
-                                ) -> Return? where Value: Equatable
+                                 @CaseBuilder cases: () -> [given<Value, Return>]
+                                 ) -> Return? where Value: Equatable
 {
     cases()
         .first { currentCase in
