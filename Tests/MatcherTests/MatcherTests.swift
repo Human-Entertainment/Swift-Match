@@ -13,9 +13,9 @@ final class MatcherTests: XCTestCase {
             }
             
             
-        } ?? {
+        } fallback: {
             "Matched none"
-        }()
+        }
         
         XCTAssert(testCase == "Hello")
     }

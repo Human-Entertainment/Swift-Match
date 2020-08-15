@@ -12,3 +12,11 @@ public func match<Value, Return>(_ value: Value,
             currentCase.values.contains(value)
         }?()
 }
+
+public func match<Value, Return>(_ value: Value,
+                                 @CaseBuilder cases: () -> [given<Value, Return>],
+                                 fallback: () -> Return
+) -> Return where Value: Equatable
+{
+    match(value, cases: cases) ?? fallback()
+}

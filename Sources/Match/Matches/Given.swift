@@ -1,7 +1,7 @@
 /// Evaluation of a given value
 public struct given<Values: Equatable, Return>: Match {
     let values: [Values]
-    let closure: () -> Return
+    public let closure: () -> Return
     
     /// Description
     /// - Parameters:
