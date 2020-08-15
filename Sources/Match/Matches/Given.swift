@@ -1,6 +1,5 @@
 /// Evaluation of a given value
-@dynamicCallable
-public struct given<Values: Equatable, Return> {
+public struct given<Values: Equatable, Return>: Match {
     let values: [Values]
     let closure: () -> Return
     
@@ -13,9 +12,5 @@ public struct given<Values: Equatable, Return> {
     {
         self.closure = closure
         self.values = values
-    }
-    
-    func dynamicallyCall(withArguments: [Void]) -> Return {
-        closure()
     }
 }
