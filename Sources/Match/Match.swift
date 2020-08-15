@@ -10,5 +10,5 @@ public func match<Value, Return>(_ value: Value,
     cases()
         .first { currentCase in
             currentCase.values.contains(value)
-        }?.closure()
+        }?()
 }
