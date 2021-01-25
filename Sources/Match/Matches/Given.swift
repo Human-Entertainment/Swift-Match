@@ -1,10 +1,6 @@
 /// Evaluation of a given value
 infix operator => : AssignmentPrecedence
 public struct given<Values: Equatable, Return>: Matcher {
-    public func dynamicallyCall(withArguments: [Void]) -> Return {
-        closure()
-    }
-    
     let values: [Values]
     public let closure: () -> Return
     
