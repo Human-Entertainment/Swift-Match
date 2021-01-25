@@ -1,5 +1,5 @@
 @dynamicCallable
-public protocol Match {
+public protocol Matcher {
     associatedtype Result
     
     var closure: () -> Result { get }
@@ -7,7 +7,7 @@ public protocol Match {
     func dynamicallyCall(withArguments: [Void]) -> Result
 }
 
-extension Match {
+extension Matcher {
     public func dynamicallyCall(withArguments: [Void]) -> Result {
         closure()
     }
