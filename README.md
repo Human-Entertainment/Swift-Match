@@ -13,6 +13,13 @@ We provide an extension to the `Equatable` protocol, this extension is two very 
     "Didn't match anything"
 }
 ```
+We also allow using `match` as a standalone function for those who prefer. This is done as following:
+```swift
+match (2) {
+    2 => "Matched two"
+}
+```
+
 The first of these methods returns an optional string, while the latter just returns a string. The fallback function is used as a fallback if the match block doesn't match anything. Of course this example looks like we can only match and either or situation, if we want more case, it'd look as following:
 ```swift
 2.match {
