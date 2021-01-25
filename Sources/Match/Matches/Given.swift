@@ -12,15 +12,17 @@ public struct given<Values: Equatable, Return>: Matcher {
     /// - Parameters:
     ///   - values: The values to evaluate against
     ///   - closure: If a value is matched from here, then this is the function whitch will be called.
-    public init(_ values: Values...,
-         perform closure: @escaping () -> Return)
+    public init(
+        _ values: Values...,
+        perform closure: @escaping () -> Return)
     {
         self.closure = closure
         self.values = values
     }
     
-    public init(_ values: [Values],
-         perform closure: @escaping () -> Return)
+    public init(
+        _ values: [Values],
+        perform closure: @escaping () -> Return)
     {
         self.closure = closure
         self.values = values
