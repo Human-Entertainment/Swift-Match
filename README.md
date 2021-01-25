@@ -1,5 +1,5 @@
 # Matcher
-An O(n) control flow expression, aiming to feel as native to Swift as possible.
+An O(n) control flow expression, aiming to feel as native to Swift as possible. It's highly inspired by [Rust's match](https://doc.rust-lang.org/rust-by-example/flow_control/match.html) as well as [C#'s Switch expression](https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/operators/switch-expression). This library allows you to store the result from a control flow
 ## Usage
 We provide an extension to the `Equatable` protocol, this extension is two very handy handy `match` methods which looks like this respectively (in this example we use the `2` instance of `Equatable`):
 ```swift
@@ -78,4 +78,14 @@ which is exactly the same as
     2 => "Matched 2"
     [3,4] => "Matched 3 or 4"
 }
+```
+
+### Storing the result
+If you're not planning to use the result, then we highly recommend using a switch statement. But if you do need to store the result, then you'd do it as follows:
+```swift
+let two = 2.match {
+    2 => "Matched two"
+}
+
+print(two) // Optional("Matched two")
 ```
