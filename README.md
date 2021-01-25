@@ -89,3 +89,10 @@ let two = 2.match {
 
 print(two) // Optional("Matched two")
 ```
+
+## Contribution
+We're delighted that you're considering contributing to this library. PR's and issues are always welcome! Other wayts to contribute is through donations; if you have benefitted from this project, then look into sponsering our other projects or the people involved.
+
+If you make a PR request, please consider adding yourself to the sponserlist.
+
+Thanks you very much!
